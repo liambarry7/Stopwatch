@@ -50,15 +50,19 @@ public class TestingTime {
 
     
     public static void main(String[] args) {
-        while (true) {
+        boolean loop = true;
+        while (loop == true) {
             System.out.println("Welcome to the stopwatch");
             System.out.println("Enter 1 to start timer");
             System.out.println("Enter 2 to stop timer");
-            System.out.println("Enter 0 to reset timer");
+            System.out.println("Enter 3 to reset timer");
+            System.out.println("Enter 0 to exit");
             int menuOptions = input.nextInt();
 
             if (menuOptions == 1) {
                 timerGo();
+            } else if (menuOptions == 0) {
+                loop = false;
             }
             
         }
